@@ -89,7 +89,7 @@ ol {
 .head-nav-list :focus,
 .list-addres :hover,
 .list-addres :focus,
-.link-nav .current {
+.link-nav.current {
   color: #404bbf;
 }
 
@@ -166,7 +166,8 @@ ol {
   background-repeat: no-repeat;
   background-size: cover;
   background-clip: padding-box;
-  width: 1440px;
+  background-position: center;
+  max-width: 1440px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -291,6 +292,8 @@ ol {
 }
 
 .item-team {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   background-color: #fff;
   width: calc((100% - 72px) / 4);
   border-radius: 0px 0px 4px 4px;
@@ -326,7 +329,7 @@ ol {
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 24px;
+  gap: 24px;
   margin-right: auto;
   margin-left: auto;
 
@@ -349,6 +352,10 @@ ol {
 .social-team-link:hover,
 .social-team-link:focus {
   background-color: #404bbf;
+}
+
+.social-icon {
+  fill: #f4f4fd;
 }
 
 /* ===== /section team===== */
@@ -378,6 +385,12 @@ ol {
 
 .item-portfoilo {
   width: calc((100% - 48px) / 3);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.item-portfoilo:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .wrapper-img {
@@ -402,7 +415,7 @@ ol {
   width: 100%;
   height: 100%;
   overflow: auto;
-  padding: 40px 32px 164px;
+  padding: 40px 32px;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -455,6 +468,11 @@ ol {
   padding: 100px 0;
 }
 
+.flex-box-footr {
+  display: flex;
+  align-items: baseline;
+}
+
 .foort-text {
   font-size: 16px;
   line-height: 1.5;
@@ -475,7 +493,6 @@ ol {
 .wrapper {
   display: flex;
   flex-direction: column;
-  margin-left: 120px;
   width: 208px;
   height: 80px;
 }
@@ -483,13 +500,14 @@ ol {
 .wrapper-logo {
   display: flex;
   flex-direction: column;
+  margin-right: 120px;
 }
 
 .social-list-footr {
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 24px;
+  gap: 16px;
   margin-right: auto;
   margin-left: auto;
 
