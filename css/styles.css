@@ -398,7 +398,7 @@ ol {
   overflow: hidden;
 }
 
-.wrapper-img:hover .overlay {
+.item-portfoilo:hover .overlay {
   transform: translateY(0%);
 }
 
